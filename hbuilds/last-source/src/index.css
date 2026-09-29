@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ===== LIGHT THEME (Default) ===== */
+:root {
+  --bg:           #faf8f5;
+  --bg-secondary: #f3f0eb;
+  --surface:      #ffffff;
+  --surface-2:    #faf9f7;
+  --border:       rgba(120, 80, 50, 0.12);
+  --border-strong: rgba(120, 80, 50, 0.25);
+  --text-primary:  #1a1a2e;
+  --text-secondary:#4a4a5a;
+  --text-muted:   #8a8a9a;
+  --accent:       #6366f1;
+  --accent-2:     #ec4899;
+  --accent-warm:  #f59e0b;
+  --glow:         rgba(99, 102, 241, 0.15);
+  --glow-warm:    rgba(245, 158, 11, 0.12);
+  --card-bg:      rgba(255,255,255,0.9);
+  --glass-bg:     rgba(255,255,255,0.7);
+  --glass-border: rgba(120, 80, 50, 0.15);
+  --shadow:       0 4px 24px rgba(120, 80, 50, 0.08);
+  --shadow-lg:    0 8px 48px rgba(120, 80, 50, 0.12);
+}
+
+/* ===== DARK THEME ===== */
+.dark {
+  --bg:           #000000;
+  --bg-secondary: #0a0a0a;
+  --surface:      #111111;
+  --surface-2:    #1a1a1a;
+  --border:       rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.15);
+  --text-primary:  #ffffff;
+  --text-secondary:#a1a1aa;
+  --text-muted:   #71717a;
+  --accent:       #22d3ee;
+  --accent-2:     #6366f1;
+  --glow:         rgba(34,211,238,0.15);
+  --card-bg:      rgba(255,255,255,0.04);
+  --glass-bg:     rgba(255,255,255,0.05);
+  --glass-border: rgba(255,255,255,0.10);
+  --shadow:       0 4px 32px rgba(0,0,0,0.5);
+  --shadow-lg:    0 8px 64px rgba(0,0,0,0.7);
+}
+
+/* ===== GLOBAL ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* ===== GLASS UTILITY ===== */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* ===== LIGHT-THEME OVERRIDES ===== */
+:root .section-bg {
+  background: var(--bg-secondary);
+}
+:root .card-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
